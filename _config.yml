@@ -1,43 +1,109 @@
-title: Robinxiang@github
-author: GitHub User
-email: your-email@domain.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: true # set to true to show excerpts on the homepage
-baseurl: 
+# Site settings
+title: Robin@github
+SEOTitle: Robin's github pages
+header-img: img/post-bg-desk.jpg
+email: dancelinux#gmail.com 
+description: "Every failure is leading towards success."
+keyword: "security technology , programing , play"
+url: "http://robinxiang.github.io"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/robinxiang/robinxiang.github.io" # you code repository
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-sass:
-  sass_dir: _sass
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: " The question is: What are we busy about?"
+sidebar-avatar: /img/3637574.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
-permalink: /posts/:title/
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
-  style: black
-  showNav: false
-  showPicker: true
 
-  # generate social links in footer
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
- 
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+# SNS settings
+RSS: false
+# weibo_username:     qiubaiying
+#zhihu_username:     qiubaiying
+#github_username:    qiubaiying
+#facebook_username:  baiying.qiu.7
+#jianshu_username:   e71990ada2fd
+#twitter_username:   qiubaiying
+
+
+
 
 # Build settings
-# theme: texture
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-plugins:
-  - jekyll-seo-tag
-#  - jekyll-feed
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# 评论系统
+# Disqus（https://disqus.com/）
+# disqus_username: qiubaiying
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: e7a4c2c4086110172179                            #生成的clientID
+  clientSecret: 77d935dac7c72adc71dfda8c27b0a81341ef6014   #生成的clientSecret
+  repo: robinxiang.github.io    #仓库名称
+  owner: robinxiang    #github用户名
+  admin: robinxiang
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+# 统计
+
+# Analytics settings
+# Baidu Analytics
+# ba_track_id: b50bf2b12b5338a1845e33832976fd68
+
+# Google Analytics
+ga_track_id: 'G-FNL52LBCD7'            # Format: UA-xxxxxx-xx
+ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+
+
+
+
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "Apple Developer",
+        href: "https://developer.apple.com/"
+    },
+    {
+        title: "Github",
+        href: "https://github.com"
+    }
+]
