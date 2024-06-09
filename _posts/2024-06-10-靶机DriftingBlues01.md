@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "渗透测试：靶机driftingblues 01"
+title:      "渗透测试：靶机driftingblues-1"
 subtitle:   信息搜集/提权/linux定时任务
 date:       2024-6-10
 author:     Robin
