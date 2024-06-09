@@ -12,7 +12,6 @@ tags:
     - Information security
     - vulnhub
 ---
-
 # 靶机 DriftingBlues：1
 
 ## 1、获取靶机
