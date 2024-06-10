@@ -1,3 +1,17 @@
+---
+layout:     post
+title:      "靶机DriftingBlues01"
+subtitle:   信息搜集/提权/linux定时任务
+date:       2024-6-10
+author:     Robin
+header-img: img/post-bg-cook.jpg
+catalog: true
+tags:
+    - Note
+    - Linux
+    - Information security
+    - vulnhub
+---
 
 # 靶机 DriftingBlues：1
 
