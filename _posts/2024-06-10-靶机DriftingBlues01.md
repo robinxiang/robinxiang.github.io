@@ -85,15 +85,15 @@ tags:
   
   `dirsearch -u http://test.driftingblues.box`
   
-  ![](../assets/2024-06-08-20-34-50-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-08-20-34-50-image.png" | absolute_url }})
 
 - 找到一个可以访问的`/robots.txt`文件，里面提供了新路径提示信息
   
-  ![](../assets/2024-06-08-20-35-15-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-08-20-35-15-image.png" | absolute_url }})
 
 - 在/ssh_cred.txt中看到密码提示,提示前缀后面加数字即是密码
   
-  ![](../assets/2024-06-08-20-36-24-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-08-20-36-24-image.png" | absolute_url }})
 
 - 根据密码结构提示，利用`crunch`工具来生成密码字典
   
@@ -103,36 +103,36 @@ tags:
   
   -t 后续指定字符串中的%为数字
   
-  ![](../assets/2024-06-08-21-46-54-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-08-21-46-54-image.png" | absolute_url }})
 
 - 利用生成的字典进行爆破
   
-  ![](../assets/2024-06-08-21-49-08-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-08-21-49-08-image.png" | absolute_url }})
 
 - 用爆破结果登录ssh，继续搜集信息
   
-  ![](../assets/2024-06-08-21-50-45-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-08-21-50-45-image.png" | absolute_url }})
 
 - 监控系统进程，寻找到root权限执行的进程
   
   借助工具`Pspy`（https://github.com/DominicBreuker/pspy/releases）,进行系统进程监控
   
-  ![](../assets/2024-06-09-23-07-31-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-09-23-07-31-image.png" | absolute_url }})
   
   发现一个以root身份定时执行的脚本任务：
   
-  ![](../assets/2024-06-09-23-08-05-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-09-23-08-05-image.png" | absolute_url }})
   
   由于脚本所处位置为/tmp，当前用户有完全控制权限
 
 - 修改定时执行任务执行的脚本，获取反弹shell和root身份，拿到flag
   
-  ![](../assets/2024-06-09-23-09-43-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-09-23-09-43-image.png" | absolute_url }})
   
   等脚本再次被计划任务执行时，获取到反弹shell
   
-  ![](../assets/2024-06-09-23-11-12-image.png" | absolute_url }})
+  ![]({{ "assets/2024-06-09-23-11-12-image.png" | absolute_url }})
 
 - 在root目录下找到flag，完成渗透
 
-![](../assets/2024-06-09-23-11-41-image.png" | absolute_url }})
+![]({{ "assets/2024-06-09-23-11-41-image.png" | absolute_url }})
